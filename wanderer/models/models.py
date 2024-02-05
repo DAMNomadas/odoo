@@ -12,3 +12,10 @@ class usuarios(models.Model):
      fecha_nacimiento = fields.Datetime()
      fecha_registro = fields.Datetime(default = lambda self: fields.Datetime.now())
 
+
+class accesoSpring(models.Model):
+     _name = 'wanderer.accesoSpring'
+     _description = 'Acceso Spring'
+
+     
+
