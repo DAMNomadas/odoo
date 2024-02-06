@@ -13,9 +13,9 @@ class usuarios(models.Model):
      fecha_registro = fields.Datetime(default = lambda self: fields.Datetime.now())
 
 
-#class accesoSpring(models.Model):
-#     _name = 'wanderer.accesoSpring'
-#    _description = 'Acceso Spring'
+class acceso_spring(models.Model):
+     _name = 'wanderer.acceso_spring'
+     _description = 'Acceso Spring'
 
      #hacer funcion para hacer compras
      #pasar como parametro la id del usuario, despues seguir todos los pasos,
