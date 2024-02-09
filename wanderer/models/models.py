@@ -21,6 +21,16 @@ class usuarios(models.Model):
                     record.fecha_inicio_premium = fields.Datetime.from_string(fields.Datetime.now())
                     record.premium = True
 
+     @api.depends('fecha_inicio_premium')
+     def _calcular_cadicidad(self):
+          for record in self:
+               if record.fecha_inicio_premium:
+                    inicio = fields.Datetime.from_string(record.fecha_inicio_premium)
+                    caducidad = inicio + timedelta(days=365)
+                    record.fecha_fin_premium = fields.Datetime.to_string(caducidad)
+               else:
+                    record.fecha_fin_premium = False
+
 
 
 class venta(models.Model):
