@@ -8,7 +8,8 @@
                     <field name="name"/>
                     <field name="nivel_karma"/>
                     <field name="premium"/>
-                    <field name="fecha_nacimiento"/>
+                    <field name="fecha_fin_premium"/>
+                    <field name="fecha_inicio_premium"/>
                     <field name="city"/>
                     <field name="country_id"/>
                 </tree>

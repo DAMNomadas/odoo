@@ -22,7 +22,7 @@ class usuarios(models.Model):
                     record.premium = True
 
      @api.depends('fecha_inicio_premium')
-     def _calcular_cadicidad(self):
+     def _get_caducidad(self):
           for record in self:
                if record.fecha_inicio_premium:
                     inicio = fields.Datetime.from_string(record.fecha_inicio_premium)
